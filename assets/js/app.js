@@ -13,6 +13,7 @@ $('#btn-search').click(function() {
         var cuisines = data.restaurants[i].restaurant.cuisines;
         var address = data.restaurants[i].restaurant.location.address;
         var image = data.restaurants[i].restaurant.featured_image;
+        var thumb = data.restaurants[i].restaurant.thumb;
         // Booleano: 0 no tiene reservación, 1 si tiene
         var reservation = data.restaurants[i].restaurant.has_table_booking;
         // Booleano: 0 no tiene delivery, 1 si tiene
@@ -39,18 +40,18 @@ $('#btn-search').click(function() {
           '<img class="activator" src="' + image + '">' +
           '</div>' +
           '<div class="card-content">' +
-          '<span class="card-title activator grey-text text-darken-4">' + nombre + '<i class="material-icons right">more_vert</i></span>' +
+          '<span class="card-title activator grey-text text-darken-4">' + name + '<i class="material-icons right">more_vert</i></span>' +
           '<p>' + cuisines + '</p>' + '</div>' +
           '<div class="card-reveal">' +
-          '<span class="card-title grey-text text-darken-4">' + nombre + '<i class="material-icons right"> close</i></span>' +
+          '<span class="card-title grey-text text-darken-4">' + name + '<i class="material-icons right"> close</i></span>' +
           '<ul>' +
-          '<li>Dirección:' + addres + '</li>' +
+          '<li>Dirección:' + address + '</li>' +
           '<li>Reserva:' + reservation + '</li>' +
           '<li>Delivery:' + deliveryOnline + '</li>' +
           '<li>Raiting:' + rating + '</li>' +
           '<li>Votos:' + votes + '</li>' +
           '<li>Comentarios:' + ratingText + '</li>' +
-          '</ul><div></div>');
+          '</ul></div></div>');
       }
     }
   });
